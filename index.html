@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Appointment System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Healthcare Appointment</h1>
+      <p class="subtitle">Schedule your appointment with ease</p>
+      <form id="appointmentForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="doctor">Select Doctor</label>
+          <select id="doctor" required>
+            <option value="">Choose a doctor</option>
+            <option value="Dr. Asha">Dr. Asha – Cardiologist</option>
+            <option value="Dr. Kumar">Dr. Kumar – General Physician</option>
+            <option value="Dr. Meena">Dr. Meena – Dermatologist</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Appointment Date</label>
+          <input type="date" id="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" required />
+        </div>
+
+        <button type="submit" class="btn">Book Appointment</button>
+      </form>
+
+      <div id="confirmation" class="hidden">
+        <h3>✅ Appointment Confirmed!</h3>
+        <p id="confirmationText"></p>
+        <button onclick="resetForm()" class="btn-secondary">Book Another</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
